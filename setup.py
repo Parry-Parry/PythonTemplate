@@ -1,10 +1,12 @@
 from setuptools import setup, find_packages
 
+package_name = 'project'
+
 setup(
-    name='project',  # The name of your package
+    name=package_name,  # The name of your package
     version='0.1.0',  # Your package version
     packages=find_packages(where='src'),  # Look for packages in the 'src' directory
-    package_dir={'project': 'src'},  # Map the package name to the 'src' directory
+    package_dir={package_name: 'src'},  # Map the package name to the 'src' directory
     author='Anon A. Mous',
     author_email='anon@mous.com',
     description='A default python template',
