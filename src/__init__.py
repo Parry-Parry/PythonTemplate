@@ -1,14 +1,15 @@
 __version__ = "0.0.1"
 
-class functionRegister(object):
+class objectRegister(object):
     def __init__(self):
-        self.functions = {}
+        self.objects = {}
     
-    def register(self, func : callable, name : str = None):
+    def register(self, obj, name : str = None):
         if name is None:
-            name = func.__name__
-        self.functions[name] = func
+            name = obj.__name__
+        self.objects[name] = obj
     
     def __get__(self, name : str):
-        return self.functions[name]
+        return self.objects[name]
+
         
